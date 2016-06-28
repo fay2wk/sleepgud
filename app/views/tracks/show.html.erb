@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @track.date %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @track.day %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @track.hours %>
+</p>
+
+<p>
+  <strong>Mood:</strong>
+  <%= @track.mood %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @track.product %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @track.notes %>
+</p>
+
+<p>
+  <strong>Sleep cycle:</strong>
+  <%= @track.sleep_cycle %>
+</p>
+
+<%= link_to 'Edit', edit_track_path(@track) %> |
+<%= link_to 'Back', tracks_path %>

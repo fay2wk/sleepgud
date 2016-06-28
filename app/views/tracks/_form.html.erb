@@ -1,0 +1,52 @@
+<%= form_for(track) do |f| %>
+  <% if track.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(track.errors.count, "error") %> prohibited this track from being saved:</h2>
+
+      <ul>
+      <% track.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :day %>
+    <%= f.text_field :day %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hours %>
+    <%= f.text_field :hours %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mood %>
+    <%= f.text_field :mood %>
+  </div>
+
+  <div class="field">
+    <%= f.label :product %>
+    <%= f.text_field :product %>
+  </div>
+
+  <div class="field">
+    <%= f.label :notes %>
+    <%= f.text_area :notes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sleep_cycle_id %>
+    <%= f.text_field :sleep_cycle_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

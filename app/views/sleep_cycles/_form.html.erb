@@ -1,0 +1,33 @@
+<%= form_for(sleep_cycle) do |f| %>
+  <% if sleep_cycle.errors.any? %>
+
+    <div id="error_explanation">
+      <h2><%= pluralize(@sleep_cycle.errors.count, "error") %> prohibited this sleep_cycle from being saved:</h2>
+
+      <ul>
+      <% sleep_cycle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Sleep Cycle Name" %>
+    <%= f.text_field :cycle_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Number of days" %>
+    <%= f.text_field :days %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

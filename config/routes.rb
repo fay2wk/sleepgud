@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'dash', to: 'static#dash'
 
-  resources :cycles
+  get 'about', to: 'static#about'
+
+  get 'faq', to: 'static#faq'
 
   resources :tracks
 

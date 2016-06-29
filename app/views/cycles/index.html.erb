@@ -15,7 +15,7 @@
                   <%= link_to "Your Profile", edit_user_registration_path %>
                 </li>
                 <li>
-                    <a href="#">New Log</a>
+                    <a href="#">New Sleep Cycle</a>
                 </li>
                 <li>
                     <a href="#">Tracking</a>
@@ -41,37 +41,25 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
+                      <h1>My Sleep Cycles</h1>
                       <div class="tcontainer">
-                      <h1>Tracking My Sleep</h1>
-
-                      <table class="table table-hover">
+                      <table>
                         <thead>
                           <tr>
-                            <th>Date</th>
-                            <th>Bed Time</th>
-                            <th>Wake Time</th>
-                            <th>Mood</th>
-                            <th>Hours</th>
-                            <th>Productivity</th>
-                            <th>Notes</th>
-                            <th>Edit Log</th>
-                            <th>Delete Log</th>
+                            <th>Cycle Name</th>
+                            <th>Days</th>
                             <th colspan="3"></th>
                           </tr>
                         </thead>
 
                         <tbody>
-                          <% @tracks.each do |track| %>
+                          <% @cycles.each do |cycle| %>
                             <tr>
-                              <td><%= track.date %></td>
-                              <td><%= track.bedtime %></td>
-                              <td><%= track.waketime %></td>
-                              <td><%= track.mood %></td>
-                              <td><%= track.hours %></td>
-                              <td><%= track.productivity %></td>
-                              <td><%= track.notes %></td>
-                              <td><%= link_to 'Edit', edit_track_path(track) %></td>
-                              <td><%= link_to 'Delete', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                              <td><%= cycle.cycle_name %></td>
+                              <td><%= cycle.days %></td>
+                              <td><%= link_to 'Show', cycle %></td>
+                              <td><%= link_to 'Edit', edit_cycle_path(cycle) %></td>
+                              <td><%= link_to 'Delete', cycle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                             </tr>
                           <% end %>
                         </tbody>
@@ -79,7 +67,7 @@
 
                       <br>
 
-                      <%= link_to 'New Log', new_track_path %>
+                      <%= link_to 'New Sleep Cycle', new_cycle_path %>
                       </div>
 
                       <br>
@@ -106,6 +94,8 @@
                           <div class="colf">Text</div>
                         </div>
                       </div>
+                         "All Tracks"
+                      "New Tracks"
                     </div>
                 </div>
             </div>
@@ -114,5 +104,4 @@
 
     </div>
 
-<%= link_to 'New Log', new_track_path %>
-<p id="notice"><%= notice %></p>
+<%= link_to 'New Cycle', new_cycle_path %>

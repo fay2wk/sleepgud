@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Day:</strong>
-  <%= @track.day %>
+  <strong>Mood:</strong>
+  <%= @track.mood %>
 </p>
 
 <p>
@@ -16,23 +16,13 @@
 </p>
 
 <p>
-  <strong>Mood:</strong>
-  <%= @track.mood %>
-</p>
-
-<p>
-  <strong>Product:</strong>
-  <%= @track.product %>
+  <strong>Productivity:</strong>
+  <%= @track.productivity %>
 </p>
 
 <p>
   <strong>Notes:</strong>
   <%= @track.notes %>
-</p>
-
-<p>
-  <strong>Sleep cycle:</strong>
-  <%= @track.sleep_cycle %>
 </p>
 
 <%= link_to 'Edit', edit_track_path(@track) %> |

@@ -1,15 +1,16 @@
 class TracksController < ApplicationController
   before_action :set_track, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /tracks
   # GET /tracks.json
   def index
-    @tracks = Track.all
+    @tracks = current_user.tracks.order("created_at DESC")
   end
 
   # GET /tracks/1
   # GET /tracks/1.json
   def show
+    
   end
 
   # GET /tracks/new
@@ -25,6 +26,7 @@ class TracksController < ApplicationController
   # POST /tracks.json
   def create
     @track = Track.new(track_params)
+    @track.user = current_user
 
     respond_to do |format|
       if @track.save
@@ -69,6 +71,6 @@ class TracksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def track_params
-      params.require(:track).permit(:date, :day, :hours, :mood, :product, :notes, :sleep_cycle_id)
+      params.require(:track).permit(:date, :mood, :hours, :productivity, :notes, :user_id, :bedtime, :waketime)
     end
 end

@@ -1,0 +1,28 @@
+<div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <h4 class="sleepgud">SleepGud</h4>
+                </li>
+                <li>
+                  <%= link_to "Your Profile", edit_user_registration_path %>
+                </li>
+                <li>
+                    <%= link_to "New Log", new_track_path %>
+                </li>
+                <li>
+                    <%= link_to "Sleep Wiki", wikis_path %>
+                </li>
+                <li>
+                     <%= link_to "About", about_path %>
+                </li>
+                <li>
+                     <%= link_to "FAQ", faq_path %>
+                </li>
+                <li>
+                    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                </li>
+            </ul>
+        </div>

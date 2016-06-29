@@ -4,6 +4,6 @@ class StaticController < ApplicationController
   end
 
   def dash
-    @tracks = current_user.tracks.order("created_at DESC")
+    @tracks = current_user.tracks.limit(5).order("created_at DESC")
   end
 end

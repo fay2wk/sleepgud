@@ -1,0 +1,5 @@
+<% if current_user.present? %>
+  <%= render 'nav' %>
+<% else %>
+  <%= render 'nav2' %>
+<% end %>

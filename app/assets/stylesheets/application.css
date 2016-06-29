@@ -19,6 +19,7 @@
 
  body {
    font-family: 'Dosis', sans-serif;
+   font-size: 14px;
  }
 
  .sleepgud {
@@ -165,4 +166,11 @@
 
  .colf {
    flex-direction: row;
+ }
+
+ .trcontainer {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   align-content: space-between;
  }

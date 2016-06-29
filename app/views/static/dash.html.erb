@@ -35,52 +35,20 @@
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
+
+        var barchart_options = {title:'Sleep',
+                       width:400,
+                       height:300,
+                       legend: 'none'};
+
+        var barchart = new google.visualization.BarChart(document.getElementById('barchart_div'));
+        barchart.draw(data, barchart_options);
       }
     </script>
   </head>
 
   <body>
-    <!--Div that will hold the pie chart-->
-
-
-<p id="notice"><%= notice %></p>
-
-
-<div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="/">
-                      Welcome!
-                    </a>
-                </li>
-                <li>
-                  <%= link_to "Your Profile", edit_user_registration_path %>
-                </li>
-                <li>
-                    <a href="#">New Log</a>
-                </li>
-                <li>
-                    <a href="#">Tracking</a>
-                </li>
-                <li>
-                    <%= link_to "Sleep Wiki", wikis_path %>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">FAQs</a>
-                </li>
-                <li>
-                    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
+  <%= render 'nav' %>
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
@@ -123,30 +91,20 @@
                       </table>
 
                       <br>
-
+                      <div>
+                        <%= link_to 'View all logs', tracks_path %>
+                      </div>
+                      <div>
                       <%= link_to 'New Log', new_track_path %>
+                    </div>
                       </div>
 
                       <br>
 
                       <div class="trcontainer">
                         <div id="chart_div"></div>
+                        <div id="barchart_div" style="border: 1px solid #ccc"></div>
 
-                        <div class="rowf">
-                          <div class="colf">Text</div>
-                          <div class="colf">Text</div>
-                          <div class="colf">Text</div>
-                        </div>
-                        <div class="rowf">
-                          <div class="colf">Text</div>
-                          <div class="colf">Text</div>
-                          <div class="colf">Text</div>
-                        </div>
-                        <div class="rowf">
-                          <div class="colf">Text</div>
-                          <div class="colf">Text</div>
-                          <div class="colf">Text</div>
-                        </div>
                         <div class="rowf">
                           <div class="colf">Text</div>
                           <div class="colf">Text</div>

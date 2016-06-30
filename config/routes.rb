@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'faq', to: 'static#faq'
 
+  get 'dash', to: 'static#dash'
+
   resources :tracks
 
   devise_for :users

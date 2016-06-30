@@ -211,3 +211,20 @@
   font-weight: bolder;
   font-size: 16px;
 }
+
+.charts {
+  margin: 2px;
+}
+
+.trcontainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.uchart {
+  margin: 5px;
+}
+
+.otherstat {
+  margin-top: 55px;
+}

@@ -46,7 +46,7 @@
         <%= wiki.body %>
       </div>
         <div class="lwiki">
-          Updated at: <%= wiki.created_at %>
+          Updated: <%= time_ago_in_words(wiki.created_at) %> ago
         </div>
         <div class="lwiki">
           <%= link_to 'Comments', wiki_path(wiki) %>

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'dash', to: 'static#dash'
 
+  get 'admin', to: 'static#admin'
+
   resources :tracks
 
   devise_for :users

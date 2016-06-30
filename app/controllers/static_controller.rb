@@ -11,7 +11,7 @@ class StaticController < ApplicationController
     @line_chart2 = Gchart.line(:data => Track.where(:user_id == current_user).pluck(:productivity))
   end
 
-  def addash
+  def dash
     @tracks = Track.all.order("created_at DESC")
     @users = User.all.order("created_at DESC")
     @wikis = Wiki.all.order("created_at DESC")

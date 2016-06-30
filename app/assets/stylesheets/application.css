@@ -14,12 +14,13 @@
  @import "bootstrap";
 
  html {
-   background: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSRn7cvZlmwXMtliWgV6a1d6XnwR-gbsrmFjD0vYlU1pbV0mX23TJx_uA")
+   background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSRn7cvZlmwXMtliWgV6a1d6XnwR-gbsrmFjD0vYlU1pbV0mX23TJx_uA")
  }
 
  body {
    font-family: 'Dosis', sans-serif;
    font-size: 14px;
+   margin: 0 5px 0 5px;
  }
 
  .sleepgud {
@@ -174,3 +175,39 @@
    align-items: center;
    align-content: space-between;
  }
+
+ .lform {
+   display: flex;
+   margin: 30px;
+   flex-direction: column;
+ }
+
+.wikis {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tform {
+  margin: 10px 60px 60px 60px;
+}
+
+.slog {
+  font-family: 'Bungee', cursive;
+  text-align: center;
+}
+
+.wsleep {
+  text-align: center;
+  font-family: 'Bungee', cursive;
+}
+
+.lwiki {
+  margin: 5px 30px 5px 30px;
+  text-align:justify;
+}
+
+.wtitle {
+  font-weight: bolder;
+  font-size: 16px;
+}

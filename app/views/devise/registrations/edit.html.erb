@@ -4,10 +4,30 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+  <div class="field">
+  <%= f.label :birthdate %>
+  <%= f.date_select :birthdate, {order: [:day, :month, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year'}, start_year: Date.today.year - 10, end_year: Date.today.year - 100} %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.select :gender, ['Prefer not to disclose', 'Male', 'Female', 'Trans']%>
+  </div>
+
+  <div class="field">
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+  </div>
+  
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

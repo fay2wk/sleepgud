@@ -5,5 +5,7 @@ class StaticController < ApplicationController
 
   def dash
     @tracks = current_user.tracks.limit(5).order("created_at DESC")
-  end
+
+    @bar_chart = Gchart.bar(:data => Track.where(:user_id == current_user).pluck(:hours))
+    end
 end

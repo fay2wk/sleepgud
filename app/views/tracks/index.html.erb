@@ -10,7 +10,7 @@
                   <%= link_to "Your Profile", edit_user_registration_path %>
                 </li>
                 <li>
-                    <a href="#">New Log</a>
+                    <%= link_to 'Back to Dash' %>
                 </li>
                 <li>
                     <a href="#">Tracking</a>
@@ -19,10 +19,10 @@
                     <%= link_to "Sleep Wiki", wikis_path %>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <%= link_to 'About', about_path %>
                 </li>
                 <li>
-                    <a href="#">FAQs</a>
+                    <%= link_to 'FAQs', faq_path %>
                 </li>
                 <li>
                     <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>

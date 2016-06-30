@@ -92,31 +92,23 @@
 
                       <br>
                       <div>
-                        <%= link_to 'View all logs', tracks_path %>
-                      </div>
-                      <div>
-                      <%= link_to 'New Log', new_track_path %>
+                        <%= link_to 'View all logs', tracks_path %> |
+                        <%= link_to 'New Log', new_track_path %>
                     </div>
                       </div>
 
                       <br>
 
                       <div class="trcontainer">
+                        <div>Average Hours Per Day</div>
+                        <%= image_tag(@bar_chart) %>
                         <div id="chart_div"></div>
-                        <div id="barchart_div" style="border: 1px solid #ccc"></div>
-
-                        <div class="rowf">
-                          <div class="colf">Text</div>
-                          <div class="colf">Text</div>
-                          <div class="colf">Text</div>
-                        </div>
                       </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
-
     </div>
 
 <%= link_to 'New Log', new_track_path %>

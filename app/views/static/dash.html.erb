@@ -1,5 +1,7 @@
-<%= if current_user.admin == true
-  render "static/admin"
-else
-  render "static/udash"
-end %>
+<% if current_user.admin == true %>
+  <%= link_to "Admin", admin_path %>
+<% else %>
+  Welcome
+<% end %>
+
+<%= render "static/udash" %>
